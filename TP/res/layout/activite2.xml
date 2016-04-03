@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <EditText 
+      android:id="@+id/convert" 
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:hint="Convertir"
+      android:inputType="phone"
+      android:layout_centerHorizontal = "true"
+      android:layout_marginTop="40dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/convert"
+        android:layout_alignBottom="@id/convert"
+        android:text="€"
+        android:textStyle="bold"
+        />
+    
+<TextView
+        android:id="@+id/resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        />
+
+<Button
+        android:id="@+id/retour"
+        style="@style/ColorButton"
+        android:layout_below="@id/resultat"
+        android:layout_alignLeft="@id/resultat"
+        android:background="@drawable/valider_animation"
+        android:text="Retour"
+        android:textColor="#FFFFFF" />
+        
+    
+
+</RelativeLayout>

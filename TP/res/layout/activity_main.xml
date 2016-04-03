@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+ 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+    <EditText 
+      android:id="@+id/recherche" 
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:hint="Login"
+      android:inputType="text"
+      android:layout_below="@id/listView"
+      android:layout_marginTop="40dp"
+    />
+    
+    <Button
+        android:id="@+id/website"
+        style="@style/ColorButton"
+        android:layout_toRightOf="@id/recherche"
+        android:layout_alignTop="@id/recherche"
+        android:layout_marginLeft="40dip"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/valider_animation"
+        android:text="Valider"
+        android:textColor="#FFFFFF" />
+
+    
+</RelativeLayout>
