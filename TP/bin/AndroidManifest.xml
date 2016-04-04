@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hannequin.tp.SecondActivity"
+            android:name=".SecondActivity"
             android:label="@string/app_name" >
         </activity>
     </application>

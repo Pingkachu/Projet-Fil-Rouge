@@ -21,13 +21,13 @@ import android.text.TextWatcher;
 
 public class MainActivity extends Activity {
 	
-	ListView mListView;
-	EditText mEditText;
-	Button webSite;
-	WebView mWebView;
+	private ListView mListView = null;
+	private EditText mEditText = null;
+	private Button webSite = null;
+	private WebView mWebView = null;
 	
-	TauxPays[] liste = { TauxPays.FR, TauxPays.GB, TauxPays.CA, TauxPays.AU, TauxPays.US,
-			TauxPays.NZ, TauxPays.JP, TauxPays.VN, TauxPays.TN, TauxPays.ML};
+	public MainActivity self = this;
+	Annonce[] liste = Annonce.getAnnonces();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +40,15 @@ public class MainActivity extends Activity {
                   
          webSite.setOnClickListener(webSiteListener);
          mEditText.addTextChangedListener(textWatcher);
-         ItemAdapter adapter = new ItemAdapter(MainActivity.this, liste);
+         ItemAdapter adapter = new ItemAdapter(self, liste);
          mListView.setAdapter(adapter);
          mListView.setOnItemClickListener(new OnItemClickListener() {
 
              public void onItemClick(AdapterView<?> arg0, View arg1, int position,
                      long arg3) {
                  // TODO Auto-generated method stub
-            	Intent appel = new Intent(MainActivity.this, SecondActivity.class);
-            	appel.putExtra("ISO", ((TauxPays)mListView.getItemAtPosition(position)).getnomISO() );
-            	appel.putExtra("tauxPays", (TauxPays)mListView.getItemAtPosition(position) );
+            	Intent appel = new Intent(self, SecondActivity.class);
+            	appel.putExtra("Annonce", (CharSequence)mListView.getItemAtPosition(position) );
  	            startActivity(appel);
              }
          });
@@ -84,7 +83,7 @@ public class MainActivity extends Activity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			String recherche = mEditText.getText().toString();
-			Toast.makeText(MainActivity.this, "Connection au site de recherche...", Toast.LENGTH_SHORT).show();
+			Toast.makeText(self, "Connection au site de recherche...", Toast.LENGTH_SHORT).show();
 	        setContentView(R.layout.web_activity);
 	        mWebView = (WebView) findViewById(R.id.webView);
 	        mWebView.loadUrl("http://www.google.com/#q="+recherche);

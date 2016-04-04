@@ -20,42 +20,42 @@ public final class R {
         public static final int white=0x7f040000;
     }
     public static final class drawable {
-        public static final int angleterre=0x7f020000;
-        public static final int australie=0x7f020001;
-        public static final int black=0x7f020002;
-        public static final int button_animation=0x7f020003;
-        public static final int canada=0x7f020004;
-        public static final int france=0x7f020005;
-        public static final int green=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int japon=0x7f020008;
-        public static final int mali=0x7f020009;
-        public static final int nouvellezeland=0x7f02000a;
-        public static final int pink=0x7f02000b;
-        public static final int red=0x7f02000c;
-        public static final int tunisie=0x7f02000d;
-        public static final int usa=0x7f02000e;
-        public static final int valider_animation=0x7f02000f;
-        public static final int vietnam=0x7f020010;
-        public static final int white=0x7f020011;
+        public static final int black=0x7f020000;
+        public static final int button_animation=0x7f020001;
+        public static final int green=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int pink=0x7f020004;
+        public static final int portable=0x7f020005;
+        public static final int red=0x7f020006;
+        public static final int valider_animation=0x7f020007;
+        public static final int white=0x7f020008;
     }
     public static final class id {
-        public static final int convert=0x7f070000;
-        public static final int drapeau=0x7f070006;
-        public static final int listView=0x7f070003;
-        public static final int monnaie=0x7f070008;
-        public static final int nomPays=0x7f070007;
-        public static final int recherche=0x7f070004;
-        public static final int resultat=0x7f070001;
-        public static final int retour=0x7f070002;
-        public static final int webView=0x7f070009;
-        public static final int website=0x7f070005;
+        public static final int avatar=0x7f07000e;
+        public static final int avatar2=0x7f070000;
+        public static final int comm2=0x7f070006;
+        public static final int etat2=0x7f070003;
+        public static final int listView=0x7f070009;
+        public static final int marque=0x7f07000f;
+        public static final int marque2=0x7f070001;
+        public static final int modele=0x7f070010;
+        public static final int modele2=0x7f070002;
+        public static final int offre=0x7f070008;
+        public static final int prix2=0x7f070004;
+        public static final int prop=0x7f07000d;
+        public static final int propText=0x7f07000c;
+        public static final int recherche=0x7f07000a;
+        public static final int retour=0x7f070007;
+        public static final int tel2=0x7f070005;
+        public static final int webView=0x7f070011;
+        public static final int website=0x7f07000b;
     }
     public static final class layout {
         public static final int activite2=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int view_holder=0x7f030002;
-        public static final int web_activity=0x7f030003;
+        public static final int propsition=0x7f030002;
+        public static final int view_holder=0x7f030003;
+        public static final int web_activity=0x7f030004;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

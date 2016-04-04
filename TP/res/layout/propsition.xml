@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView
+       android:id="@+id/propText" 
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+	android:text="Proposition"
+      android:layout_centerHorizontal = "true"
+      android:gravity="center"
+      android:layout_marginTop="40dp"
+        />
+    
+    <EditText 
+      android:id="@+id/prop" 
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:hint="200"
+      android:inputType="phone"
+      android:layout_centerHorizontal = "true"
+      android:layout_below="@id/propText"
+      android:layout_marginTop="40dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/prop"
+        android:layout_alignBottom="@id/prop"
+        android:text="€"
+        android:textStyle="bold"
+        />
+    
+<TextView
+        android:id="@+id/marque2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dip"
+        android:textStyle="bold"
+        />
+<TextView
+        android:id="@+id/modele2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+		android:layout_alignParentRight="true"
+        android:layout_marginRight="40dip"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        />
+
+<Button
+        android:id="@+id/retour"
+        style="@style/ColorButton"
+        android:layout_below="@id/modele2"
+        android:layout_alignRight="@id/modele2"
+        android:background="@drawable/valider_animation"
+        android:text="Retour"
+        android:textColor="#FFFFFF" />
+        
+    
+
+</RelativeLayout>
