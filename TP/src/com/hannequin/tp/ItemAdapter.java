@@ -9,9 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ItemAdapter extends ArrayAdapter<TauxPays> {
+public class ItemAdapter extends ArrayAdapter<Annonce> {
 	 
-    public ItemAdapter(Context context, TauxPays[] resource) {
+    public ItemAdapter(Context context, Annonce[] resource) {
 		super(context, 0 , resource);
 		// TODO Auto-generated constructor stub
 	}
@@ -27,23 +27,23 @@ public class ItemAdapter extends ArrayAdapter<TauxPays> {
         if(viewHolder == null)
         {
             viewHolder = new ViewHolder();
-            viewHolder.nomPays = (TextView) convertView.findViewById(R.id.nomPays);
-            viewHolder.monnaie = (TextView) convertView.findViewById(R.id.monnaie);
-            viewHolder.drapeau = (ImageView) convertView.findViewById(R.id.drapeau);
+            viewHolder.marque = (TextView) convertView.findViewById(R.id.marque);
+            viewHolder.modele = (TextView) convertView.findViewById(R.id.modele);
+            viewHolder.avatar = (ImageView) convertView.findViewById(R.id.avatar);
             convertView.setTag(viewHolder);
         }
  
-        TauxPays pays = getItem(position);
-        viewHolder.nomPays.setText(pays.getNom());
-        viewHolder.monnaie.setText(pays.getMonnaie());
-        viewHolder.drapeau.setImageResource(pays.getDrapeau());
+        Annonce annonce = getItem(position);
+        viewHolder.marque.setText(annonce.getMarque());
+        viewHolder.modele.setText(annonce.getModele());
+        viewHolder.avatar.setImageResource(annonce.getAvatar());
  
         return convertView;
     }
  
     private class ViewHolder{
-        public TextView nomPays;
-        public TextView monnaie;
-        public ImageView drapeau;
+        public TextView marque = null;
+        public TextView modele = null;
+        public ImageView avatar = null;
     }
 }

@@ -3,44 +3,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
-    <EditText 
-      android:id="@+id/convert" 
-      android:layout_height="wrap_content"
-      android:layout_width="fill_parent"
-      android:hint="Convertir"
-      android:inputType="phone"
-      android:layout_centerHorizontal = "true"
-      android:layout_marginTop="40dp"
-    />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@id/convert"
-        android:layout_alignBottom="@id/convert"
-        android:text="€"
-        android:textStyle="bold"
-        />
+    <ImageView
+        android:id="@+id/avatar2"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
     
 <TextView
-        android:id="@+id/resultat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/marque2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
         android:textColor="@android:color/black"
-        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/avatar2"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+<TextView
+        android:id="@+id/modele2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textColor="@android:color/black"
+		android:layout_toRightOf="@id/avatar2"
+		android:layout_below="@id/marque2"
+        android:gravity="center"
         android:layout_centerVertical="true"
         android:textStyle="bold"
         />
 
+<TextView
+        android:id="@+id/etat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/avatar2"
+        android:layout_alignLeft="@+id/avatar2"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/prix2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/etat2"
+        android:layout_below="@+id/avatar2"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/etat2"
+        android:layout_alignLeft="@+id/etat2"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/comm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/prix2"
+        android:layout_below="@+id/etat2"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        />
+
+
+
 <Button
         android:id="@+id/retour"
         style="@style/ColorButton"
-        android:layout_below="@id/resultat"
-        android:layout_alignLeft="@id/resultat"
-        android:background="@drawable/valider_animation"
+        android:layout_below="@id/tel2"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_animation"
         android:text="Retour"
+        android:textColor="#FFFFFF" />
+
+<Button
+        android:id="@+id/offre"
+        style="@style/ColorButton"
+        android:layout_below="@id/tel2"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/valider_animation"
+        android:text="Faire une offre"
         android:textColor="#FFFFFF" />
         
     
 
 </RelativeLayout>
+

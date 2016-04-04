@@ -4,32 +4,29 @@
     android:layout_height="match_parent" 
     xmlns:tools="http://schemas.android.com/tools">
     
-    
     <ImageView
-        android:id="@+id/drapeau"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        />
+        android:id="@+id/avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
  
     <TextView
-        android:id="@+id/nomPays"
+        android:id="@+id/marque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/drapeau"
-        android:layout_alignTop="@+id/drapeau"
+        android:layout_toRightOf="@+id/avatar" 
+        android:layout_alignTop="@+id/avatar"
         android:textStyle="bold"
         />
- 
+
     <TextView
-        android:id="@+id/monnaie"
+        android:id="@+id/modele"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/nomPays"
-        android:layout_alignTop="@+id/drapeau"
-            />
-    
+        android:layout_alignLeft="@+id/marque"
+        android:layout_below="@+id/marque"
+        android:layout_alignBottom="@+id/avatar" />
+
 
 </RelativeLayout>

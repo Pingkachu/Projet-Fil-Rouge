@@ -10,66 +10,56 @@ import android.view.View.OnClickListener;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends Activity{
 	
-	TextView mTextView;
-	EditText mEditText;
-	Button mButton;
+	TextView modele;
+	TextView marque;
+	TextView tel;
+	TextView prix;
+	TextView etat;
+	TextView comm;
+	ImageView avatar;
+	Button retour;
+	Button offre;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activite2);
         
-        mEditText = (EditText) findViewById(R.id.convert);
-        mTextView = (TextView) findViewById(R.id.resultat);
-        mButton = (Button) findViewById(R.id.retour);
+        retour = (Button) findViewById(R.id.retour);
+        marque = (TextView) findViewById(R.id.marque2);
+        modele = (TextView) findViewById(R.id.modele2);   
+        tel = (TextView) findViewById(R.id.tel2);
+        etat = (TextView) findViewById(R.id.etat2);
+        comm = (TextView) findViewById(R.id.comm2);
+        avatar = (ImageView) findViewById(R.id.avatar2);
+        prix = (TextView) findViewById(R.id.prix2);
+        offre = (Button) findViewById(R.id.offre);
         
-
-        
-        
-        
-        mEditText.addTextChangedListener(textWatcher);
-        mButton.setOnClickListener(retourListener);
-
-    }
-    
-    //M�thode pour agir sur les editText
-    private TextWatcher textWatcher = new TextWatcher() {
-
-      @Override
-      public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-      }
-  		
-      @Override
-      public void beforeTextChanged(CharSequence s, int start, int count,
-        int after) {
-    
-      }
-
-	@Override
-	public void afterTextChanged(Editable s) {
-		// TODO Auto-generated method stub
-		Bundle extras = getIntent().getExtras();
+        Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String iso = extras.getString("ISO");
-            TauxPays tauxPays = extras.getParcelable("tauxPays");
-            float convertir = Float.valueOf(mEditText.getText().toString());
-            float taux = tauxPays.getTaux();
-    		float conversion = convertir*taux;
-    		mTextView.setText(Float.toString(conversion)+tauxPays.getMonnaie());
+            Annonce annonce = extras.getParcelable("Annonce");
+            marque.setText(annonce.getMarque());
+            modele.setText(annonce.getModele());    
+            tel.setText(annonce.getTel());
+            etat.setText(annonce.getTel());
+            comm.setText(annonce.getTel());
+            prix.setText(annonce.getTel());
+            avatar.setImageResource(annonce.getAvatar());
         }
         else{
-        	Toast.makeText(SecondActivity.this, "Désolé je ne retrouve pas le pays de conversion", Toast.LENGTH_SHORT).show();
+        	Toast.makeText(SecondActivity.this, "Désolé je ne retrouve pas les donn�es concernant cette annonce", Toast.LENGTH_SHORT).show();
         }
-		
-	}
-    };
+
+        retour.setOnClickListener(retourListener);
+
+    }
     
     
     private OnClickListener retourListener = new OnClickListener() {
