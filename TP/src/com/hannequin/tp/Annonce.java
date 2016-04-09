@@ -117,9 +117,9 @@ public String getMarque() {
 		this.date = date;
 	}
 
-public static Annonce[] getAnnonces()
+public static ArrayList<Annonce> getAnnonces()
 {
-	Annonce[] annonces = null;
+	ArrayList<Annonce> annonces = null;
 	try {
         // Encodage des paramètres de la requête
         String donnees = URLEncoder.encode("start", "ISO-8859-1")+ "="+URLEncoder.encode("1", "ISO-8859-1");
@@ -144,7 +144,7 @@ public static Annonce[] getAnnonces()
             annonce.setDate(obj.getString("date_annonce"));
             
             // On ajoute la personne à la liste
-            annonces[i] = annonce;
+            annonces.add(annonce);
            
         }
 

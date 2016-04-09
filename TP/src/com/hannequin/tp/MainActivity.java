@@ -1,12 +1,9 @@
 package com.hannequin.tp;
 
-import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.AdapterView;
@@ -18,6 +15,10 @@ import android.view.View.OnClickListener;
 import android.widget.Toast;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.ArrayAdapter;
+import java.util.ArrayList;
+
+
 
 public class MainActivity extends Activity {
 	
@@ -27,7 +28,7 @@ public class MainActivity extends Activity {
 	private WebView mWebView = null;
 	
 	public MainActivity self = this;
-	Annonce[] liste = Annonce.getAnnonces();
+	ArrayList<Annonce> liste = Annonce.getAnnonces();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class MainActivity extends Activity {
                   
          webSite.setOnClickListener(webSiteListener);
          mEditText.addTextChangedListener(textWatcher);
-         ItemAdapter adapter = new ItemAdapter(self, liste);
+         ArrayAdapter<Annonce> adapter = new ArrayAdapter<Annonce>(self, android.R.layout.simple_list_item_1, liste);
          mListView.setAdapter(adapter);
          mListView.setOnItemClickListener(new OnItemClickListener() {
 
